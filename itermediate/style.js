@@ -126,23 +126,26 @@
 // exercise 3
 
 var x,y,chr;
-// var para="";
-var para = document.createElement("P");
+chr="";
 
-for(x=1; x <=7; x++)
+for(x=1; x <7; x++)
 {
-   for (y=1; y < x; y++)
-     {
-    chr=chr+("*");    
-    // document.write(chr);
-     document.getElementsByClassName("temp")[0].appendChild(para).innerHTML="f";
+var line = document.createElement("P");
+line.className="line";
+document.getElementsByClassName("temp")[0].appendChild(line);
 
-//  document.getElementsByClassName("demo")[0].innerHTML=chr;
+
+   for (y=1; y < x+1; y++)
+     {
+    chr+=("*");    
+    line.innerHTML=chr;
+
 
       }
 
-      // console.log(chr);
-      // document.getElementsByClassName("demo")[0].innerHTML=chr;
+      
 
- chr='';    
+      chr='';  
 }
+
+// arrray[row][col];
