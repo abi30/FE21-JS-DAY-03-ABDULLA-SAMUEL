@@ -35,15 +35,26 @@ var temp =parseInt(Math.random()*(max-min+1)+min);
 
 
 console.log(temp);
+var pic = document.createElement("IMG");
+
 
 if (temp>=-5 && temp<=10){
     var temp_content=  document.getElementsByClassName("temp")[0];
    temp_content.style.color="white";
     temp_content.style.fontSize="24px";
     temp_content.style.textAlign="center";
-
     temp_content.style.backgroundColor="blue";
   temp_content.innerHTML=`The weather is cold ${temp}`;
+
+pic.setAttribute("src","/img/cold.jpg");
+pic.setAttribute("width","304");
+pic.setAttribute("height","228");
+pic.setAttribute("alt","the weather is so cold");
+document.getElementById("temp").appendChild(pic);
+
+
+
+
 }
 else if (temp>10 && temp<=25){
     var temp_content=  document.getElementsByClassName("temp")[0];
@@ -53,6 +64,18 @@ else if (temp>10 && temp<=25){
     temp_content.style.textAlign="center";
 
     temp_content.innerHTML=`The weather is moderate ${temp}`;
+
+
+    pic.setAttribute("src","/img/Moderateweather.jpg");
+    pic.setAttribute("width","304");
+    pic.setAttribute("height","228");
+   
+    pic.setAttribute("alt","the weather is so morderate");
+    document.getElementById("temp").appendChild(pic);
+    
+
+
+
 }
 else {
   var temp_content=  document.getElementsByClassName("temp")[0];
@@ -60,12 +83,15 @@ else {
     temp_content.style.fontSize="24px";
     temp_content.style.backgroundColor="red";
     temp_content.style.textAlign="center";
-    temp_content.style="center";
-    // var img = document.createElement("img")
-    // img.src = "https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/sun/red-sun-in-the-sky.-photo-cristian-lozan.jpg"
-    // Idea is to add an image with JS
+  
+    
     
     temp_content.innerHTML=`The weather is hot ${temp}`;
     
+    pic.setAttribute("src","/img/hot.png");
+    pic.setAttribute("width","304");
+    pic.setAttribute("height","228");
+    pic.setAttribute("alt","the weather is so hot");
+    document.getElementById("temp").appendChild(pic);
 
 }
